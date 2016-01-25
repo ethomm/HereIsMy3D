@@ -1,4 +1,44 @@
-<% @users.each do |user| %>
-	<div><%= user.first_name %></div>
+<div class="row">
+<div class="col-md-8">
+	<h2>Users</h2>
+</div>
+<div class="col-md-4">
 
-<% end %>
+	<button class="btn btn-success btn-sm addButton"><i class="fa fa-plus-circle">&nbsp;</i>Add user</button>
+</div>
+</div>
+	<div class="row">
+		
+		<div class="col-md-4">
+			<h4>Name:</h4>
+		</div>
+		
+		<div class="col-md-4">
+			<h4>Email adress</h4>
+		</div>
+
+		<div class="col-md-4">
+		<h4>Action</h4>
+		</div>
+</div>
+<div class="users">
+	<% @users.each do |user| %>
+		<div class="row">
+			<div class="col-md-4">
+				<i class="fa fa-user">&nbsp;</i>
+				<%= link_to user, user %>
+			</div>
+		
+			<div class="col-md-4">
+				<i class="fa fa-envelope">&nbsp;</i>
+				<%= user.email %>
+			</div>
+
+			<div class="col-md-4">
+			<button class="btn btn-danger btn-sm">
+			<i class="fa fa-minus-circle">&nbsp;</i>
+				Delete User</button>
+			</div>
+		</div>
+	<% end %>
+</div>

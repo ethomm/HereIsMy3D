@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+.addButton{
+	margin: 10px 0 0 0;
+}
+
+
+
+.users{
+	.row{
+		padding: 10px;
+	}
+	.row:nth-child(even){
+		background-color: #cecece;
+	}
+}
